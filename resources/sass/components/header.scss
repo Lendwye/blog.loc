@@ -1,0 +1,24 @@
+.navbar-links {
+	display: flex;
+	gap: 30px;
+	margin: 0 auto;
+}
+.navbar-link {
+	color: rgba(0, 0, 0, 0.7);
+	transition: .2s color 0s;
+	&:hover {
+		color: rgba(0, 0, 0, 1);
+	}
+}
+.search__icon {
+	width: 20px !important;
+	height: 20px !important;
+}
+.lhs {
+	display: flex;
+	align-items: center;
+}
+.rhs {
+	display: flex;
+	align-items: center;
+}
