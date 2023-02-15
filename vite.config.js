@@ -12,6 +12,7 @@ export default defineConfig({
 				'resources/js/js_vue/post_page_component.js',
 				'resources/js/js_vue/user_component.js',
 				'resources/js/js_vue/user_page_component.js',
+				'resources/js/js_vue/author_component.js',
             ],
             refresh: true,
         }),

@@ -32,6 +32,9 @@
 						<li class="navbar-item">
 							<a class="navbar-link" href="/users">Пользователи</a>
 						</li>
+						<li class="navbar-item">
+							<a class="navbar-link" href="/author">Об авторе</a>
+						</li>
 					</ul>
 				</div>
 				<div class="rhs">
