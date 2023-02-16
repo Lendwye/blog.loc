@@ -11,6 +11,7 @@ use App\Http\Controllers\AuthorPageController;
 use App\Http\Controllers\AdminPageController;
 use App\Http\Controllers\Admin\AdminMainController;
 use App\Http\Controllers\Admin\Post\AdminPostController;
+use App\Http\Controllers\Admin\User\AdminUserController;
 
 Auth::routes();
 
@@ -26,10 +27,13 @@ Route::get('/user', [UserPageController::class, 'index']);
 
 Route::get('/author', [AuthorPageController::class, 'index']);
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admin'], function () {
 	Route::get('/', [AdminMainController::class, 'index'])->name('admin.index');
 	Route::group(['namespace' => 'Post'], function () {
 		Route::get('/post', [AdminPostController::class, 'index'])->name('admin.post.index');
+	});
+	Route::group(['namespace' => 'User'], function () {
+		Route::get('/user', [AdminUserController::class, 'index'])->name('admin.user.index');
 	});
 });
 

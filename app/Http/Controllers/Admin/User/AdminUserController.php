@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Post;
+namespace App\Http\Controllers\Admin\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Posts;
 use App\Models\Users;
 
-class AdminPostController extends Controller
+class AdminUserController extends Controller
 {
     public function index()
 	{
@@ -15,7 +15,7 @@ class AdminPostController extends Controller
 			'posts_amount' => count(Posts::all()),
 			'users_amount' => count(Users::all()),
 		];
-		$posts = Posts::all();
-        return view('admin.post.index', ['posts' => $posts, 'sidebar_info' => $sidebar_info]);
+		$users = Users::all();
+        return view('admin.user.index', ['users' => $users, 'sidebar_info' => $sidebar_info]);
 	}
 }
